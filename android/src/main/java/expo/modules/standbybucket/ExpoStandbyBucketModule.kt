@@ -26,14 +26,7 @@ class ExpoStandbyBucketModule : Module() {
       val usageStatsManager = reactContext.getSystemService(Context.USAGE_STATS_SERVICE) as? UsageStatsManager
         ?: throw StandbyBucketException("UsageStatsManager is not available on this device.")
 
-      val bucket = try {
-        usageStatsManager.appStandbyBucket
-      } catch (error: SecurityException) {
-        throw StandbyBucketException(
-          "Missing android.permission.PACKAGE_USAGE_STATS permission.",
-          error
-        )
-      }
+      val bucket = usageStatsManager.appStandbyBucket
 
       mapOf(
         "bucket" to bucket,
