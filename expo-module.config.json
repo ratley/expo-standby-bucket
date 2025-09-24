@@ -1,0 +1,9 @@
+{
+  "platforms": ["apple", "android", "web"],
+  "apple": {
+    "modules": ["ExpoStandbyBucketModule"]
+  },
+  "android": {
+    "modules": ["expo.modules.standbybucket.ExpoStandbyBucketModule"]
+  }
+}
