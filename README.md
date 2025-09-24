@@ -55,9 +55,11 @@ const info = StandbyBucket.getAppStandbyBucket();
 
 ## Platform notes
 
-- Android 9 (API 28) and higher: returns the real standby bucket.
-- Android versions below 9: reports `supported = false` and `bucketName = "UNSUPPORTED"`.
-- iOS, web, and other platforms: always return the `UNSUPPORTED` response.
+- **Android 9+**: Returns the real standby bucket with `supported = true`
+- **Android < 9**: Returns `UNSUPPORTED` response with `supported = false`
+- **iOS/Web**: Returns `UNSUPPORTED` response with `supported = false` (no errors thrown)
+
+The module gracefully handles all platforms without requiring platform checks in your code.
 
 ## Example app
 

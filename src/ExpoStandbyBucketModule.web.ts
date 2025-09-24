@@ -5,7 +5,7 @@ import type {
 	ExpoStandbyBucketModuleInterface,
 } from "./ExpoStandbyBucket.types";
 
-class ExpoStandbyBucketModule
+class StandbyBucketModule
 	extends NativeModule
 	implements ExpoStandbyBucketModuleInterface
 {
@@ -18,7 +18,4 @@ class ExpoStandbyBucketModule
 	}
 }
 
-export default registerWebModule(
-	ExpoStandbyBucketModule,
-	"ExpoStandbyBucketModule",
-);
+export default registerWebModule(StandbyBucketModule, "StandbyBucket");

@@ -2,7 +2,7 @@ import ExpoModulesCore
 
 public class ExpoStandbyBucketModule: Module {
   public func definition() -> ModuleDefinition {
-    Name("ExpoStandbyBucket")
+    Name("StandbyBucket")
 
     Function("getAppStandbyBucket") {
       return [

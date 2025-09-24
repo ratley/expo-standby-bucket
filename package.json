@@ -1,6 +1,6 @@
 {
 	"name": "expo-standby-bucket",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"description": "Access your app's current Android App Standby bucket",
 	"main": "build/index.js",
 	"types": "build/index.d.ts",
@@ -8,6 +8,7 @@
 		"build/",
 		"src/",
 		"android/",
+		"ios/",
 		"expo-module.config.json",
 		"README.md",
 		"LICENSE"
