@@ -1,6 +1,6 @@
 {
 	"name": "expo-standby-bucket",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Access your app's current Android App Standby bucket",
 	"main": "build/index.js",
 	"types": "build/index.d.ts",
