@@ -27,7 +27,11 @@
 		"react-native",
 		"expo",
 		"expo-standby-bucket",
-		"ExpoStandbyBucket"
+		"standby",
+		"bucket",
+		"app-standby-bucket",
+		"appstandbybucket",
+		"android"
 	],
 	"repository": "https://github.com/ratley/expo-standby-bucket",
 	"bugs": {

@@ -9,7 +9,7 @@ import expo.modules.kotlin.modules.ModuleDefinition
 
 class ExpoStandbyBucketModule : Module() {
   override fun definition() = ModuleDefinition {
-    Name("ExpoStandbyBucket")
+    Name("StandbyBucket")
 
     Function("getAppStandbyBucket") {
       if (Build.VERSION.SDK_INT < Build.VERSION_CODES.P) {

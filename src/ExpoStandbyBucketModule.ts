@@ -5,13 +5,17 @@ import type {
 	ExpoStandbyBucketModuleInterface,
 } from "./ExpoStandbyBucket.types";
 
-declare class ExpoStandbyBucketModule
+declare class StandbyBucketModule
 	extends NativeModule
 	implements ExpoStandbyBucketModuleInterface
 {
 	getAppStandbyBucket(): AppStandbyBucketInfo;
 }
 
-export default requireNativeModule<ExpoStandbyBucketModule>(
-	"ExpoStandbyBucket",
-);
+const StandbyBucket = requireNativeModule<StandbyBucketModule>("StandbyBucket");
+
+// Export a simple function for easier usage
+export const getStandbyBucket = () => StandbyBucket.getAppStandbyBucket();
+
+// Legacy export for backward compatibility
+export default StandbyBucket;

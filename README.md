@@ -19,20 +19,27 @@ Access your app's current Android App Standby bucket (ACTIVE, WORKING_SET, FREQU
 ## Usage
 
 ```ts
-import ExpoStandbyBucket from "expo-standby-bucket";
+import { getStandbyBucket } from "expo-standby-bucket";
 
-const info = ExpoStandbyBucket.getAppStandbyBucket();
+const info = getStandbyBucket();
 
 console.log(info.bucket);      // e.g. 10
 console.log(info.bucketName);  // "ACTIVE"
-console.log(info.supported);   // true when API >= 28 (Android 9) and permission granted
+console.log(info.supported);   // true on Android 9+
 ```
 
-`getAppStandbyBucket` runs synchronously and returns the current bucket as an `AppStandbyBucketInfo` object:
+Or using the module directly (legacy):
+```ts
+import StandbyBucket from "expo-standby-bucket";
+
+const info = StandbyBucket.getAppStandbyBucket();
+```
+
+`getStandbyBucket()` runs synchronously and returns the current bucket as an `AppStandbyBucketInfo` object. You can also use `StandbyBucket.getAppStandbyBucket()` for the module approach.
 
 - `bucket`: the raw integer from `UsageStatsManager.appStandbyBucket`.
 - `bucketName`: one of `EXEMPTED`, `ACTIVE`, `WORKING_SET`, `FREQUENT`, `RARE`, `RESTRICTED`, `NEVER`, `UNKNOWN`, or `UNSUPPORTED`.
-- `supported`: `true` only on Android 9+ when the usage access permission is available; otherwise `false` with `bucket = -1` and `bucketName = "UNSUPPORTED"`.
+- `supported`: `true` on Android 9+; otherwise `false` with `bucket = -1` and `bucketName = "UNSUPPORTED"`.
 
 | Raw value | bucketName    | Notes |
 |-----------|---------------|-------|
