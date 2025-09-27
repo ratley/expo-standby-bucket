@@ -1,5 +1,5 @@
-import { getStandbyBucket } from "expo-standby-bucket";
 import { SafeAreaView, ScrollView, Text, View } from "react-native";
+import { getStandbyBucket } from "react-native-standby-bucket";
 
 export default function App() {
 	const info = getStandbyBucket();

@@ -1,10 +1,10 @@
 {
-  "extends": "expo/tsconfig.base",
-  "compilerOptions": {
-    "strict": true,
-    "paths": {
-      "expo-standby-bucket": ["../src/index"],
-      "expo-standby-bucket/*": ["../src/*"]
-    }
-  }
+	"extends": "expo/tsconfig.base",
+	"compilerOptions": {
+		"strict": true,
+		"paths": {
+			"react-native-standby-bucket": ["../src/index"],
+			"react-native-standby-bucket/*": ["../src/*"]
+		}
+	}
 }

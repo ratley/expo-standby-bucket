@@ -1,4 +1,4 @@
-# expo-standby-bucket
+# react-native-standby-bucket
 
 Access your app's current Android App Standby bucket (ACTIVE, WORKING_SET, FREQUENT, RARE, RESTRICTED, etc.) from Expo or React Native so you can tune background work based on how the system ranks your app.
 
@@ -7,7 +7,7 @@ Access your app's current Android App Standby bucket (ACTIVE, WORKING_SET, FREQU
 1. Install the module:
 
    ```sh
-   npx expo install expo-standby-bucket
+   npx expo install react-native-standby-bucket
    ```
 
 2. Rebuild your native project:
@@ -19,7 +19,7 @@ Access your app's current Android App Standby bucket (ACTIVE, WORKING_SET, FREQU
 ## Usage
 
 ```ts
-import { getStandbyBucket } from "expo-standby-bucket";
+import { getStandbyBucket } from "react-native-standby-bucket";
 
 const info = getStandbyBucket();
 
@@ -30,7 +30,7 @@ console.log(info.supported);   // true on Android 9+
 
 Or using the module directly (legacy):
 ```ts
-import StandbyBucket from "expo-standby-bucket";
+import StandbyBucket from "react-native-standby-bucket";
 
 const info = StandbyBucket.getAppStandbyBucket();
 ```
